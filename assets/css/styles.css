@@ -518,10 +518,6 @@ main p{
   width: auto;
 }
 
-.contact .email {
-  text-transform: lowercase;
-}
-
 footer {
   margin-bottom: 5rem;
 }
