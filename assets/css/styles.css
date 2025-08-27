@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@200;400&display=swap');
 
+/* tema escuro  */
 :root, :root[data-theme='dark'] {
   --primary-color: #F0F0F0;
 
@@ -15,7 +16,7 @@
   --link-color: #9A9A9C;
   --icon-color: #C7C8C9;
 }
-
+/* tema claro */
 :root[data-theme='light'] {
   --primary-color: #0B0B0F;
 
@@ -209,6 +210,8 @@ p {
 
 .menu--social {
   gap: 1rem;
+  background-color: transparent;
+  color: var(--title-color);
 }
 
 .btn {
@@ -252,12 +255,17 @@ main {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  background-image: radial-gradient(#8D2AAB, #655C96, #342943);
+}
+main p{
+  color: var(--primary-color);
 }
 
 .main__content1 {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  height: 550px;
 }
 
 .main__content2 iframe {
