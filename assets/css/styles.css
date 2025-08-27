@@ -187,19 +187,39 @@ p {
   width: 100%;
   background: transparent;
   border-radius: 3.125rem;
-  border: none;
+  border: 2px solid transparent;
   padding: 0.875rem 1.5rem;
   transition: ease-in-out .3s;
   cursor: pointer;
   color: var(--primary-color);
 }
 
-.btn:hover {
+.btn-gradient{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  width: 100%;
+  background: transparent;
+  border-radius: 20px;
+  border: 2px solid transparent;
+  padding: 0.875rem 1.5rem;
+  transition: ease-in-out .3s;
+  cursor: pointer;
+  color: var(--primary-color);
+  border-image: linear-gradient(90deg, #E17949, #8D2AAB)1;
+}
+
+.btn:hover, .btn-gradient:hover {
   transform: scale(1.05);
   transition: ease-in-out .3s;
 }
 
 .btn span, .btn i {
+  font-size: 1.25rem;
+  text-transform: uppercase;
+}
+.btn a{
   font-size: 1.25rem;
   text-transform: uppercase;
 }
@@ -240,23 +260,6 @@ main, .projects, .about, .contact {
 main p{
   color: var(--primary-color);
 }
-.main__content1 #botao-gradiente {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.625rem;
-  width: fit-content;
-  padding: 0.875rem 1.5rem;
-  background: #201428; 
-  border-radius: 3.125rem; 
-  color: var(--button-text-color);
-  cursor: pointer;
-  transition: ease-in-out .3s;
-  z-index: 1;
-  border: none; 
-}
-
 
 .main__content1 {
   display: flex;
