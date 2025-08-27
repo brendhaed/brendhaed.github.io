@@ -1,44 +1,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@200;400&display=swap');
-
-/* tema escuro  */
-:root, :root[data-theme='dark'] {
-  --primary-color: #F0F0F0;
-
-  --primary-bg-color: #111217;
-  --secondary-bg-color: #28292E;
-  --primary-border-color: #28292E;
-	--secondary-border-color: #56575A;
-
-  --title-color: #F0F0F0;
-  --text-color: #9A9A9C;
-  --link-color: #9A9A9C;
-  --icon-color: #C7C8C9;
-}
-/* tema claro */
-:root[data-theme='light'] {
-  --primary-color: #0B0B0F;
-
-	--primary-bg-color: #E9E9E9;
-	--secondary-bg-color: #C7C8C9;
-	--primary-border-color: #C7C8C9;
-	--secondary-border-color: #9A9A9C;
-
-	--title-color: #0B0B0F;
-	--text-color: #28292E;
-	--link-color: #28292E;
-	--icon-color: #56575A;
-}
-
-html[data-theme='light'] .brand__logo {
-  filter: invert(1);
-}
-
-html[data-theme='light'] .technologies__logo {
-  filter: invert(80%);
-}
-
+@import url("assets/css/temas.css");
+/* reset css */
 * {
   margin: 0;
   padding: 0;
@@ -48,7 +12,7 @@ html[data-theme='light'] .technologies__logo {
   scrollbar-width: thin;
   scrollbar-color: var(--secondary-bg-color) transparent;
 }
-
+/* global css */
 body {
   background: var(--primary-bg-color);
   font-family:'Inter', Tahoma, Geneva, Verdana, sans-serif;
@@ -123,6 +87,7 @@ p {
   text-align: justify;
 }
 
+/* header */
 .header {
   display: flex;
   flex-flow: row wrap;
@@ -247,10 +212,7 @@ p {
   border: 1px solid var(--primary-color);
 }
 
-main, .projects, .about, .contact {
-  padding: 2.5rem 1rem;
-}
-
+/* main */
 main {
   display: flex;
   flex-direction: column;
@@ -259,6 +221,7 @@ main {
   background-size: 800% 800%;
   animation: moverGradient 15s ease infinite;
 }
+
 @keyframes moverGradient {
   0% {
     background-position: 0% 50%;
@@ -270,15 +233,30 @@ main {
     background-position: 0% 50%;
   }
 }
+main, .projects, .about, .contact {
+  padding: 2.5rem 1rem;
+}
 
 main p{
   color: var(--primary-color);
 }
-#projetos .btn--primary{
-  border: radial-gradient(circle at 50% 50%, #E17949, #8D2AAB);
-  background-color: #201428;
-  color: var(--primary-color);
+.main__content1 #botao-gradiente {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  width: fit-content;
+  padding: 0.875rem 1.5rem;
+  background: #201428; 
+  border-radius: 3.125rem; 
+  color: var(--button-text-color);
+  cursor: pointer;
+  transition: ease-in-out .3s;
+  z-index: 1;
+  border: none; 
 }
+
 
 .main__content1 {
   display: flex;
