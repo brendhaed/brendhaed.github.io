@@ -330,6 +330,10 @@ main p{
   flex-direction: column;
   gap: 2rem;
 }
+.projects__card:hover {
+  transform: scale(1.02);
+  transition: ease-in-out .5s;
+}
 
 .card__cover {
   width: 100%;
@@ -527,6 +531,24 @@ footer p {
   text-align: center;
   padding: 1rem;
 }
+
+/* efeito scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.technologies__item:nth-child(1).active { transition-delay: 0.1s; }
+.technologies__item:nth-child(2).active { transition-delay: 0.3s; }
+.technologies__item:nth-child(3).active { transition-delay: 0.5s; }
+.technologies__item:nth-child(4).active { transition-delay: 0.7s; }
+
 
 /* Responsividade */
 @media (min-width: 768px) {
